@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #94B9F3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #FFC2A0;
+            border-radius: 20px;
+            padding: 30px;
+            width: 320px;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            border: none;
+            color: #000;
+            background-color: #ffffff;
+        }
+        input::placeholder {
+            color: #000;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 30px;
+            border: none;
+            background-color: #f23ed7;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #f23ed7;
+        }
+        .forgot-password a {
+            color: #000;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>안녕하세요! 반갑습니다!</h1>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email address">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <input type="submit" value="Log in" class="btn">
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .register-container {
+            background-color: #eae7f8;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #d5c9ff;
+            background-color: #f3f1f9;
+            box-sizing: border-box;
+        }
+        input[type="text"] + input[type="text"] {
+            margin-left: 20px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #cabaf5;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #b4a5e8;
+        }
+    </style>
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Register now</h1>
+        <form>
+            <input type="text" placeholder="First Name *">
+            <input type="text" placeholder="Last Name *">
+            <br>
+            <input type="email" placeholder="Email address *" style="width: 100%;">
+            <br>
+            <input type="password" placeholder="Password *" style="width: 100%;">
+            <br>
+            <input type="submit" value="Sign up">
+        </form>
+    </div>
+</body>
+</html>
