@@ -3,61 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
     <style>
-        .register-container {
-            background-color: #eae7f8;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 350px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #94B9F3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        h1 {
-            margin: 0 0 20px 0;
+        .registration-box {
+            background-color: #ece9f8;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .registration-box h2 {
+            margin-top: 0;
             font-size: 24px;
-            font-weight: 600;
+            color: #000;
         }
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: calc(50% - 10px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            border: 2px solid #d5c9ff;
-            background-color: #f3f1f9;
-            box-sizing: border-box;
-        }
-        input[type="text"] + input[type="text"] {
-            margin-left: 20px;
-        }
-        input[type="submit"] {
+        .registration-box input {
             width: 100%;
             padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d6c8f0;
             border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            color: #9782db;
+            background-color: #fff;
+        }
+        .registration-box button {
+            width: 100%;
+            padding: 10px;
             border: none;
-            background-color: #cabaf5;
-            color: #fff;
+            border-radius: 10px;
+            background-color: #cab9f1;
+            color: #000;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover {
-            background-color: #b4a5e8;
         }
     </style>
-    <title>Register</title>
 </head>
 <body>
-    <div class="register-container">
-        <h1>Register now</h1>
-        <form>
-            <input type="text" placeholder="First Name *">
-            <input type="text" placeholder="Last Name *">
-            <br>
-            <input type="email" placeholder="Email address *" style="width: 100%;">
-            <br>
-            <input type="password" placeholder="Password *" style="width: 100%;">
-            <br>
-            <input type="submit" value="Sign up">
-        </form>
+    <div class="registration-box">
+        <h2>Register now</h2>
+        <input type="email" placeholder="Email address *">
+        <input type="password" placeholder="Password*">
+        <button>Sign up</button>
     </div>
 </body>
 </html>

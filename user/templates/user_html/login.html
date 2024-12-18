@@ -63,21 +63,50 @@
     .new_user a:hover {
         text-decoration: underline;
     }
+    .alert {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #333;
+        padding: 15px 30px;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        display: none; /* 기본적으로 숨김 */
+    }
+    .alert.success {
+        border: 2px solid green;
+        color: green;
+    }
 </style>
 {% endblock head %}
 
 {% block body %}
 <div class="container">
     <h1>안녕하세요! 반갑습니다!</h1>
-    <form action = "{% url user:login %}" method = 'POST'>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li style="color: green; font-weight: bold;">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action = "{% url 'user:login' %}" method = 'POST'>
+        {% csrf_token %}
         <label for="email">Email</label>
         <input type="email" name = 'email' id="email" placeholder="이메일을 입력해 주세요">
         <label for="password">Password</label>
-        <input type="password" name = password id="password" placeholder="패스워드를 입력해 주세요">
+        <input type="password" name = "password" id="password" placeholder="패스워드를 입력해 주세요">
         <input type="submit" value="Log in" class="btn">
     </form>
     <div class="new_user">
-        <a href="{% url 'user/signup' %}">회원가입이 필요하세요?</a>
+        <a href="{% url 'user:signup' %}">신규 회원가입</a>
     </div>
 </div>
+<button onclick="history.back()">돌아가기</button>
 {% endblock body %}

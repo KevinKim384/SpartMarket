@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.urls import path
 from . import views
 
-app_name = 'article'
+app_name = 'articles'
 urlpatterns = [
-    path('article/', views.article, name = 'article')
+    path('article', views.article, name = 'article'),
 ]

@@ -19,8 +19,8 @@ from django.shortcuts import redirect
 from django.urls import include, path
 from user import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('user.urls')),
+    path('article/', include('articles.urls'))
 ] 

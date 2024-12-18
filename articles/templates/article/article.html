@@ -1,2 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block head %}
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+.alert.success {
+    border: 2px solid green;
+    color: green;
+}
+{% endblock head %}
+
+{% block body %}
+{% if messages %}
+<div class="alert-wrapper">
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock body %}

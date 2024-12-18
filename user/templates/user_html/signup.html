@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #94B9F3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .registration-box {
+        background-color: #ece9f8;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 300px;
+        text-align: left;
+    }
+    .registration-box h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #000;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .registration-box input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #d6c8f0;
+        border-radius: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+        color: #9782db;
+        background-color: #fff;
+    }
+    .registration-box button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #cab9f1;
+        color: #000;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+        background-color: #f23ed7;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+</style>
+{% endblock head %}
+
+{% block body %}
+<body>
+    <div class="registration-box">
+        <h2>-간편 회원가입-</h2>
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li style="color: green; font-weight: bold;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action = "{% url 'user:signup' %}" method = 'POST'>
+            {% csrf_token %}
+            <label for="email">Email</label>
+            <input type="email" name = 'email' id="email" placeholder="가입할 이메일을 입력해 주세요">
+            <label for="password">Password</label>
+            <input type="password" name = "password" id="password" placeholder="가입할 패스워드를 입력해 주세요">
+            <button>Sign up</button>
+        </form>
+        {% comment %} <input type="email" placeholder="Email address *">
+        <input type="password" placeholder="Password*"> {% endcomment %}
+    </div>
+</body>
+{% endblock body%}
