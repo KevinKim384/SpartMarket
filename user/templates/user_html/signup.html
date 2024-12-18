@@ -12,6 +12,7 @@
         height: 100vh;
         margin: 0;
     }
+    
     .registration-box {
         background-color: #ece9f8;
         padding: 20px;
@@ -20,15 +21,18 @@
         width: 300px;
         text-align: left;
     }
+    
     .registration-box h2 {
         margin-top: 0;
         font-size: 24px;
         color: #000;
     }
+    
     h1 {
         font-size: 24px;
         margin-bottom: 20px;
     }
+    
     .registration-box input {
         width: 100%;
         padding: 10px;
@@ -40,6 +44,7 @@
         color: #9782db;
         background-color: #fff;
     }
+    
     .registration-box button {
         width: 100%;
         padding: 10px;
@@ -50,6 +55,7 @@
         font-size: 16px;
         cursor: pointer;
     }
+    
     button {
         width: 100%;
         padding: 10px;
@@ -59,8 +65,22 @@
         color: #fff;
         font-size: 16px;
         cursor: pointer;
+        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; /* 애니메이션 효과 추가 */
     }
     
+    button:active {
+        transform: scale(0.95); /* 버튼 크기 축소 */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* 눌렀을 때 그림자 효과 */
+    }
+    
+    /* 돌아가기 버튼과 Sign up 버튼 간격 조정 */
+    .registration-box form button {
+        margin-bottom: 10px; /* Sign up 버튼 아래 간격 */
+    }
+    
+    button {
+        margin-top: 10px; /* 돌아가기 버튼 위 간격 */
+    }
 </style>
 {% endblock head %}
 
@@ -84,7 +104,9 @@
             <button>Sign up</button>
         </form>
         {% comment %} <input type="email" placeholder="Email address *">
-        <input type="password" placeholder="Password*"> {% endcomment %}
+        <input type="password" placeholder="Password*">  {% endcomment %}
+        <button onclick="history.back()">돌아가기</button>
     </div>
+    
 </body>
 {% endblock body%}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Hand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            padding: 50px;
+        }
+        .edit-profile {
+            background-color: #e1e4fb;
+            padding: 20px;
+            width: 25%;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .edit-profile h2 {
+            margin-top: 0;
+        }
+        .edit-profile img {
+            width: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+        .edit-profile button {
+            background-color: #4b6efb;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .edit-profile input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .chosen-items {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-around;
+        }
+        .item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 28%;
+            text-align: center;
+            padding: 10px;
+        }
+        .item img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
+            background-color: white;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <img src="logo.png" alt="Second Hand Logo">
+            <span>Second Hand</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">My Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="edit-profile">
+            <h2>Edit Profile</h2>
+            <img src="profile.jpg" alt="Profile Picture">
+            <button>Change Picture</button>
+            <input type="text" placeholder="User ID">
+            <input type="password" placeholder="Password">
+            <button style="background-color: #000;">Save Changes</button>
+        </div>
+        <div class="chosen-items">
+            <div class="item">
+                <img src="chair.jpg" alt="Vintage Wooden Chair">
+                <h3>Vintage Wooden Chair</h3>
+                <p>Price: $45</p>
+            </div>
+            <div class="item">
+                <img src="book.jpg" alt="Classic Leather-bound Book">
+                <h3>Classic Leather-bound Book</h3>
+                <p>Price: $15</p>
+            </div>
+            <div class="item">
+                <img src="radio.jpg" alt="Retro Radio">
+                <h3>Retro Radio</h3>
+                <p>Price: $60</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2023 Second Hand Market. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -10,7 +10,7 @@ from django.contrib import messages
 
 # Create your views here.
 #--------------------------------------------------------
-#이건 건들지마세요요
+# 로그인
 def login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -20,10 +20,18 @@ def login(request):
             auth_login(request, user)
             messages.success(request, '로그인에 성공하였습니다! 환영합니다.')
             return redirect('articles:article')
+        else:
+            messages.error(request, '한번 더 아이디와 비밀번호를 확인해 주세요!')
     return render(request, 'user_html/login.html')
 #--------------------------------------------------------
-#로그인 및 새 계정 함수 모음
-
+#--------------------------------------------------------
+# 로그아웃 함수
+def logout(request):
+    auth_logout(request)
+    return redirect("/")
+#--------------------------------------------------------
+#--------------------------------------------------------
+# 신규 회원가입 함수
 def signup(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -38,6 +46,9 @@ def signup(request):
             return redirect('/')
     print(3)
     return render(request, 'user_html/signup.html')
-
 #--------------------------------------------------------
-#??
+#--------------------------------------------------------
+#개인 프로필 함수
+def userprofile(request):
+    if request.method == 'POST':
+        pass

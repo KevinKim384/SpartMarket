@@ -7,3 +7,5 @@ class Users(AbstractUser):
     created_at= models.DateTimeField(auto_now_add = True) # add는 생성때 추가
     updated_at = models.DateTimeField(auto_now = True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="articles", null = True)
+    image = models.ImageField(upload_to= 'images/', blank = True)
+    

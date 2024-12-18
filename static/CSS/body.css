@@ -1,18 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #94B9F3;
+.container {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* height: 100vh; */
-    margin: 0;
+    flex-direction: row;
 }
 
-a {
-    color : #000;
+.sidebar {
+    background-color: #e5e5f7;
+    padding: 20px;
+    width: 200px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
     text-decoration: none;
+    color: #333;
 }
 
-a:hover {
-    text-decoration: underline;
+.content {
+    margin-left: 270px;  /* 사이드바 너비만큼 왼쪽 여백 */
+    padding: 20px;
+    flex-grow: 1;
 }
